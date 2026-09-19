@@ -123,7 +123,7 @@ def sum_of_digits(num):
         total += num
     return total
 
-print(sum_of_digits(434))
+# print(sum_of_digits(434))
 
 # OR
 
@@ -139,7 +139,41 @@ def sum_of_digits2(num):
 
     return total
 
-print(sum_of_digits(434))
+# print(sum_of_digits(434))
+
+# 5. Bouncy
+
+"""
+given: list of operations
+output: sum --> integer
+EC: empty list, no list
+
+PLAN
+- initialize a sum variable to 1
+- loop through the list and assess which operation we have 
+- if the list contains something else continue ie. skip it. 
+
+"""
+def final_value_after_operations(operations):
+    tiger_sum = 1
+
+    if len(operations) < 0:
+        return tiger_sum
+
+    for op in operations:
+        if op == "bouncy" or op == "flouncy":
+            tiger_sum += 1
+        if op == "trouncy" or op == "pouncy":
+            tiger_sum -= 1
+        else:
+            continue
+
+    return tiger_sum
+
+operations = ["trouncy", "flouncy", "flouncy"]
+print(final_value_after_operations(operations))
+
+
 
 
 
