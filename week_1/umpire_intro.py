@@ -26,4 +26,122 @@ def nanana_batman(x):
     return "batman"
 
 # review
-print(nanana_batman(3))
+# print(nanana_batman(3))
+
+# problem set version 1
+
+# input: string with alph chars and spaces separating the words
+# output: the reversed string
+
+# edge cases: empty string, 1 word string, special chars
+
+
+def reverse_sentence(sentence):
+    res = ""
+    words = sentence.split()
+    reversed_list = []
+
+    if len(sentence) <= 0:
+        return None
+
+    if len(words) == 1:
+        return sentence
+
+    for i in range(len(words)-1, -1, -1):
+        reversed_list.append(words[i])
+
+    res = " ".join(reversed_list)
+
+    return res
+
+
+# print(reverse_sentence("tubby little cubby all stuffed with fluff"))
+# print(reverse_sentence("Pooh"))
+
+# 2. 
+
+def goldilocks_approved(nums): 
+    if len(nums) < 3:
+        return -1
+
+    # nums.sort()
+
+    # return nums[1]
+
+    
+    min_elt = min(nums)
+    max_elt = max(nums)
+
+    for i in nums:
+        if i != min_elt and i != max_elt:
+            return i
+
+# 3. 
+
+# input : list 
+# output : list
+# EC: empty list, list w/ 1 element, string 
+
+def delete_minimum_elements(hunny_jar_sizes):
+    res = []
+
+    if len(hunny_jar_sizes) == 1:
+        return hunny_jar_sizes
+
+    while len(hunny_jar_sizes) > 0:
+        min_val = min(hunny_jar_sizes)
+        res.append(min_val)
+        hunny_jar_sizes.remove(min_val)
+
+    return res
+
+# print(delete_minimum_elements([5, 3, 2, 4, 1])) 
+
+# Problem 4: Sum of Digits
+
+# UNDERSTAND:
+#  given: int
+#  output: sum --> int
+# EC:
+# - float?, string?, return None
+
+# PLAN
+# initialize a sum variable
+# split the int into a list of ints
+# convert the num to int to split it and then
+# convert the individual numbers back to integers. 
+# loop and sum each int in the list to a total 
+
+def sum_of_digits(num):
+
+    if not isinstance(num, int):
+        return None
+    total = 0
+    list_of_nums = [int(d) for d in str(num)]
+
+    for num in list_of_nums:
+        total += num
+    return total
+
+print(sum_of_digits(434))
+
+# OR
+
+def sum_of_digits2(num):
+    total = 0
+
+    while num > 0:
+        # get the last digit from %
+        total += (num % 10)
+
+        # then remove the last digit using //
+        num //= 10
+
+    return total
+
+print(sum_of_digits(434))
+
+
+
+
+   
