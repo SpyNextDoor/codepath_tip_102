@@ -171,11 +171,48 @@ def final_value_after_operations(operations):
     return tiger_sum
 
 operations = ["trouncy", "flouncy", "flouncy"]
-print(final_value_after_operations(operations))
+# print(final_value_after_operations(operations))
 
 # 6. Acronym
 
+"""
+UNDERSTAND:
+- given: list of strings, string s
+- return: True or False
+EC:
+- Empty list
+- not all elt in list are strings
+- is it case sensitive?
 
+PLAN
+- check for empty string then return False
+- make the acronym s case insensititve
+- initialize a result string
+- loop through the list, take the char at 0-id and add it to the string result 
+- compare result and s if they match return True else False 
+"""
+
+def is_acronym(words, s):
+    if not isinstance(words, list):
+        return False
+    s.lower()
+
+    result = ""
+
+    for w in words:
+        result += w[0].lower()
+
+    if result == s:
+        return True
+    
+    return False
+
+words = ["christopher", "robin", "milner"]
+s = "crm"
+# print(is_acronym(words, s))
+
+
+        
 
 
 
