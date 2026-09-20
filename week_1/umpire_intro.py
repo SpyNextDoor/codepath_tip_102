@@ -173,6 +173,7 @@ def final_value_after_operations(operations):
 operations = ["trouncy", "flouncy", "flouncy"]
 print(final_value_after_operations(operations))
 
+# 6. Acronym
 
 
 
