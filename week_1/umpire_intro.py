@@ -226,7 +226,97 @@ def make_divisible_by_3(nums):
 
     return count
 
-print(make_divisible_by_3([3, 6, 9]))
+# print(make_divisible_by_3([3, 6, 9]))
+
+# 8. exclusive elements
+
+def exclusive_elemts(lst1, lst2):
+    if not isinstance(lst1, list) and not isinstance(lst2, list):
+        return None
+
+    new_list = []
+
+    for item in lst1:
+        found = False 
+
+        for other in lst2:
+            if item == other:
+                found = True
+                break
+
+        if not found:
+            new_list.append(item)
+
+    for item in lst2:
+            found = False 
+    
+            for other in lst1:
+                if item == other:
+                    found = True
+                    break
+    
+            if not found:
+                new_list.append(item)
+
+    return new_list
+
+lst1 = ["pooh", "roo", "piglet"]
+lst2 = ["piglet", "eeyore", "owl"]
+# print(exclusive_elemts(lst1, lst2))
+
+# 9. merge strings alternatively
+
+def merge_alternatively(word1, word2):
+    pointer1, pointer2 = 0, 0
+
+    new_str = ""
+    while pointer1 < len(word1) and pointer2 < len(word2):
+        new_str += word1[pointer1] + word2[pointer2]
+        pointer1 += 1
+        pointer2 += 1
+
+    if len(word1) > len(word2):
+        for i in range (pointer1, len(word1)):
+            new_str += word1[i]
+
+    else:
+        for i in range (pointer2, len(word2)):
+            new_str += word2[i]
+
+    return new_str
+
+word1 = "eyre"
+word2 = "eo"
+# print(merge_alternatively(word1, word2))
+
+word1 = "hfa"
+word2 = "eflump"
+# print(merge_alternatively(word1, word2))
+
+# 10. eeyore's house
+
+def good_pairs(pile1, pile2, k):
+    pair_count = 0
+
+    for i in (pile1):
+        for j in (pile2):
+            if i % (j * k) == 0:
+                pair_count += 1
+
+    return pair_count
+
+pile1 = [1, 3, 4]
+pile2 = [1, 3, 4]
+k = 1
+# print(good_pairs(pile1, pile2, k))
+
+pile1 = [1, 2, 4, 12]
+pile2 = [2, 4]
+k = 3
+# print(good_pairs(pile1, pile2, k))
+
+
+
 
 
         
