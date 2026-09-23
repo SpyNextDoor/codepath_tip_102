@@ -142,7 +142,7 @@ def identify_conflicts(venue1_schedule, venue2_schedule):
          if artist in venue2_schedule:
             if venue1_schedule[artist] == venue2_schedule[artist]:
                 conflict_table[artist] = time
-    return conflict_table, conflict_table2
+    return conflict_table
 
 venue1_schedule = {
     "Stromae": "9:00 PM",
@@ -172,17 +172,19 @@ Plan: Initiate an empty dictionary that track the artists and their number of vo
 """
 
 
-
-
-
 def best_set(votes):
     vote_counts = {}
+    highest_vote = 1
     for artist in votes.values():
         if artist in vote_counts:
             vote_counts[artist] +=1 
         else: 
             vote_counts[artist] = 1
-    return max(vote_counts, key=vote_counts.get)
+    for artist, score in vote_counts.items():
+        if score > highest_vote:
+            highest_vote = score
+            highest_scorer = artist
+    return highest_scorer
 
 votes1 = {
     1234: "SZA", 
