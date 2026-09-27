@@ -203,5 +203,5 @@ votes2 = {
     1238: "SZA"
 }
 
-print(best_set(votes1))
-print(best_set(votes2))
+# print(best_set(votes1))
+# print(best_set(votes2))
