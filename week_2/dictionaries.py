@@ -11,13 +11,13 @@ student["emal"] = "alice@gmail.com"
 student.update({"major": "CS", "year": "2"})
 
 # read
-print(student["name"]) # when sure the key is there
-print(student.get("phone")) # alternative
-print(student.get("phone", "N/A")) # return NA to avoid errors
+# print(student["name"]) # when sure the key is there
+# print(student.get("phone")) # alternative
+# print(student.get("phone", "N/A")) # return NA to avoid errors
 
 # exist ??
-print("age" in student) # False
-print("major" in student) # True
+# print("age" in student) # False
+# print("major" in student) # True
 
 # dictionaries are mutable
 
@@ -47,7 +47,7 @@ def word_count(lst):
 
     return new_dict
 
-print(word_count([]))
+# print(word_count([]))
 
 """
 UNDERSTAND:
@@ -98,7 +98,7 @@ festival_schedule = {
     "Lawrence": {"day": "Friday", "time": "6:00 PM", "stage": "Main Stage"}
 }
     
-print(get_artist_info("Blood Orange", festival_schedule)) 
+# print(get_artist_info("Blood Orange", festival_schedule)) 
 
 """ 
 Understand:
@@ -119,7 +119,7 @@ def total_sales(ticket_sales):
 
 ticket_sales = {"Friday": 200, "Saturday": 1000, "Sunday": 800, "3-Day Pass": 2500}
 
-print(total_sales(ticket_sales))
+# print(total_sales(ticket_sales))
 
 """
 in: 2 dict
@@ -158,7 +158,7 @@ venue2_schedule = {
     "Wizkid": "6:00 PM"
 }
 
-print(identify_conflicts(venue1_schedule, venue2_schedule))
+# print(identify_conflicts(venue1_schedule, venue2_schedule))
 
 
 """ 
@@ -205,3 +205,63 @@ votes2 = {
 
 # print(best_set(votes1))
 # print(best_set(votes2))
+
+
+# 6. performances with max audience
+
+# solution 1, i used a dictionary
+
+def max_audience_performances(audiences):
+    # make a dict to track the freq occurence of a certain audience
+    # loop through the keys to find max audience
+    # then multiply it by its value to account for the combined size
+
+    audience_freq = {}
+    max_audience = 0
+    freq_tracker = 0
+
+    for num in audiences:
+        if num in audience_freq:
+            audience_freq[num] += 1
+        else:
+            audience_freq[num] = 1
+
+    print(audience_freq)
+
+    for aud_count, freq in audience_freq.items():
+        if aud_count > max_audience:
+            max_audience = aud_count
+            freq_tracker = freq
+    return max_audience * freq_tracker
+
+audiences1 = [100, 200, 200, 150, 100, 250]
+audiences2 = [120, 180, 220, 150, 220]
+
+print(max_audience_performances(audiences1))
+print(max_audience_performances(audiences2))
+
+# solution 2: use no dictionary 
+
+def max_audience_performances(audiences):
+    # find the max_count
+    # loop over to see how many times the max_count occurs
+    # return max_count * freq
+
+    freq = 0
+    max_count = 0
+
+    for aud_count in audiences:
+        if aud_count > max_count:
+            max_count = aud_count
+
+    for aud_count in audiences:
+        if aud_count == max_count:
+            freq += 1
+
+    return max_count * freq
+
+audiences1 = [100, 200, 200, 150, 100, 250]
+audiences2 = [120, 180, 220, 150, 220]
+
+print(max_audience_performances(audiences1))
+print(max_audience_performances(audiences2))
