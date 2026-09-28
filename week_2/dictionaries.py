@@ -253,9 +253,8 @@ def max_audience_performances(audiences):
     for aud_count in audiences:
         if aud_count > max_count:
             max_count = aud_count
-
-    for aud_count in audiences:
-        if aud_count == max_count:
+            freq = 1
+        elif aud_count == max_count:
             freq += 1
 
     return max_count * freq
