@@ -136,14 +136,50 @@ def merge_schedules(schdl_1, schdl_2):
 
     return merged_schdl
 
-print(merge_schedules("abc", "pqr")) 
-print(merge_schedules("ab", "pqrs")) 
-print(merge_schedules("abcd", "pq")) 
+# print(merge_schedules("abc", "pqr")) 
+# print(merge_schedules("ab", "pqrs")) 
+# print(merge_schedules("abcd", "pq")) 
 
 
 # Q6.
 
 # Q7.
+
+# hackerrank exercises:
+
+def mystery(nums):
+    left = len(nums) - 1
+    right = len(nums) - 1
+
+    while right >= 0:
+        if nums[right] != 0:
+            temp = nums[right]
+            nums[right] = nums[left]
+            nums[left] = temp
+            left -= 1
+        right -= 1
+    return nums 
+
+# print(mystery([0, 0, 1, 2, 0, 3]))
+
+def two_sum(numbers, target):
+    # Write your code here
+    if len(numbers) < 2:
+        return None
+    
+    pointer_1 = 0
+    pointer_2 = len(numbers) - 1
+    
+    while len(numbers) > 0:
+        if numbers[pointer_1] + numbers[pointer_2] > target:
+            pointer_2 -= 1
+        else:
+            pointer_1 += 1
+
+    return None
+
+numbers = [2, 7, 11, 15]
+print(two_sum(numbers, 9))
 
 
 
