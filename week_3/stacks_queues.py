@@ -105,11 +105,41 @@ def is_symmetrical_title(title):
 
 # print(is_symmetrical_title("A Sa.nta at NASA"))
 # print(is_symmetrical_title("Social Media")) 
-        
-    
-                                    
+                                
 
 # Q5.
+"""
+input: two strings each character representing an event
+output: merge both lists in alternating order
+edge case: one list empty?
+
+plan:
+- use two pointers: pointer1 in lst1 same as lst2
+- initialize the pointers and a merged_schedule lst
+- for each elt append the elt in each lst and increment pointer 
+
+"""
+
+def merge_schedules(schdl_1, schdl_2):
+    p_1 = 0
+    p_2 = 0
+    merged_schdl = ""
+
+    while p_1 < len(schdl_1) or p_2 < len(schdl_2):
+        if p_1 < len(schdl_1):
+            merged_schdl += schdl_1[p_1]
+            p_1 += 1
+
+        if p_2 < len(schdl_2):
+            merged_schdl += schdl_2[p_2]
+            p_2 += 1
+
+    return merged_schdl
+
+print(merge_schedules("abc", "pqr")) 
+print(merge_schedules("ab", "pqrs")) 
+print(merge_schedules("abcd", "pq")) 
+
 
 # Q6.
 
