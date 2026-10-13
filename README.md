@@ -10,28 +10,29 @@ The goal of this project is to build confidence with:
 - problem decomposition
 - interview-style algorithm practice
 - using the UMPIRE method for approaching problems systematically
-- working through common coding exercises involving strings, lists, and numeric logic
+- data structures: lists, dictionaries, sets, stacks, queues, and linked lists
+- object-oriented programming (classes and inheritance)
+- analyzing time and space complexity (Big O)
+- sorting algorithms
 
 ## Repository Structure
 
-- `week_1/` - Week 1 exercises and practice problems
+- `week_1/` - introductory Python exercises and the UMPIRE framework
   - `tip_102.py` - introductory Python exercises and simple function practice
   - `umpire_intro.py` - lessons introducing the UMPIRE interview framework and several problem-solving examples
-
-## Week 1 Topics Covered
-
-The exercises in this repository include:
-
-- basic function definitions and printing output
-- working with lists and string manipulation
-- searching and returning values from a collection
-- summing values and doubling list items
-- reversing a sentence
-- finding the middle value in a list
-- removing minimum elements from a list
-- calculating the sum of digits in an integer
-- implementing logic-based interview problems like "Bouncy" and acronym checks
-- using the UMPIRE method to break down and solve interview questions
+- `week_2/` - dictionaries and sets
+  - `dictionaries.py` - dictionary basics and practice problems (word counts, festival lineups, ticket sales)
+  - `sets.py` - set operations (union, intersection, difference) and a most-endangered-species problem
+  - `hackerrank_week_2.py` - HackerRank practice, including a Roman numeral to integer converter
+- `week_3/` - stacks, queues, and Big O
+  - `stacks_queues.py` - stack and queue fundamentals, including a paranthesis/order problem
+  - `big_oh.py` - time/space complexity analysis, including a duplicate-finding optimization and a stage-scheduling problem
+- `week_4/` - OOP, linked lists, and more Big O
+  - `oop.py` - classes and inheritance (`Student` and `TeachingFellow`)
+  - `linked_list.py` - singly linked list implementation and list-based problems (filtering, finding, reversing memes)
+  - `big_oh.py` - further time/space complexity practice (task pairing, smallest gap problems)
+- `side_work/` - extra practice outside the weekly curriculum
+  - `sorting_algorithms.py` - merge sort implementation and related practice problems
 
 ## UMPIRE Method
 
@@ -48,14 +49,20 @@ This is a practical approach to coding interview preparation and helps structure
 
 ## How to Run the Scripts
 
-From the project root, run:
+From the project root, run any script directly, for example:
 
 ```bash
 python3 week_1/tip_102.py
-```
-
-```bash
 python3 week_1/umpire_intro.py
+python3 week_2/dictionaries.py
+python3 week_2/sets.py
+python3 week_2/hackerrank_week_2.py
+python3 week_3/stacks_queues.py
+python3 week_3/big_oh.py
+python3 week_4/oop.py
+python3 week_4/linked_list.py
+python3 week_4/big_oh.py
+python3 side_work/sorting_algorithms.py
 ```
 
 ## Notes
@@ -64,4 +71,4 @@ This project is a learning workspace and is meant to document progress over time
 
 ## Status
 
-In progress: Week 1 exercises and interview prep fundamentals.
+In progress: Week 4 exercises (OOP, linked lists, Big O) and sorting algorithm practice.
