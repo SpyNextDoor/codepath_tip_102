@@ -1,13 +1,13 @@
-class Node:
-    def __init__(self, value):
-        self.value = value
-        self.next = None
+# class Node:
+#     def __init__(self, value):
+#         self.value = value
+#         self.next = None
 
-x = Node(3)
-y = Node(4)
+# x = Node(3)
+# y = Node(4)
 
-x.next = y
-print(x.value)
+# x.next = y
+# print(x.value)
 
 """
 Understand: 
@@ -97,3 +97,78 @@ Output Example:
 ['This is fine', 'Expanding brain', 'Surprised Pikachu']
 ['Bad Luck Brian', 'Philosoraptor', 'First world problems', 'Y U No?']
 """
+
+# LINKED LIST
+
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def add (self, val):
+        new_node = Node(val)
+        if not self.head:
+            self.head = new_node
+            return
+        current = self.head
+        while current.next:
+            current = current.next
+        current.next = new_node
+
+ll = LinkedList()
+for value in [1, 2, 3, 4, 5]:
+    ll.add(value)
+
+# instructor demo
+
+"""
+wrte a function that returns the middle node of a ll
+if the list is even return the second middle node 
+"""
+
+def find_middle(head):
+    if head is None:
+        return None
+
+    slow = head
+    fast = head 
+
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+
+    return slow
+
+ll1 = LinkedList()
+for value in [1, 2, 3, 4, 5]:
+    ll1.add(value)
+
+ll2 = LinkedList()
+for val in ['a', 3]:
+    ll2.add(val)
+
+print(find_middle(ll2.head).value)
+
+
+# detect a cycle
+
+def detect_cycle(head):
+    if head is None:
+        return None
+
+    slow = head
+    fast = head 
+
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+        if slow == fast:
+            return True
+        
+    return False
+
+    
