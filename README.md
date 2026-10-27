@@ -31,6 +31,11 @@ The goal of this project is to build confidence with:
   - `oop.py` - classes and inheritance (`Student` and `TeachingFellow`)
   - `linked_list.py` - singly linked list implementation and list-based problems (filtering, finding, reversing memes)
   - `big_oh.py` - further time/space complexity practice (task pairing, smallest gap problems)
+- `week_5/` - classes practice
+  - `classes.py` - object-oriented programming exercises (custom classes, instance methods)
+- `week_6/` - linked lists and recursion
+  - `linked_lists.py` - linked list problems (counting elements, traversal)
+  - `recursion.py` - recursion practice
 - `side_work/` - extra practice outside the weekly curriculum
   - `sorting_algorithms.py` - merge sort implementation and related practice problems
 
@@ -62,6 +67,9 @@ python3 week_3/big_oh.py
 python3 week_4/oop.py
 python3 week_4/linked_list.py
 python3 week_4/big_oh.py
+python3 week_5/classes.py
+python3 week_6/linked_lists.py
+python3 week_6/recursion.py
 python3 side_work/sorting_algorithms.py
 ```
 
@@ -71,4 +79,4 @@ This project is a learning workspace and is meant to document progress over time
 
 ## Status
 
-In progress: Week 4 exercises (OOP, linked lists, Big O) and sorting algorithm practice.
+In progress: Week 6 exercises (linked lists, recursion).
