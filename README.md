@@ -10,10 +10,12 @@ The goal of this project is to build confidence with:
 - problem decomposition
 - interview-style algorithm practice
 - using the UMPIRE method for approaching problems systematically
-- data structures: lists, dictionaries, sets, stacks, queues, and linked lists
+- data structures: lists, dictionaries, sets, stacks, queues, linked lists, and binary (search) trees
 - object-oriented programming (classes and inheritance)
 - analyzing time and space complexity (Big O)
 - sorting algorithms
+- recursion and binary search
+- tree traversal (BFS/DFS) and binary search tree operations
 
 ## Repository Structure
 
@@ -36,6 +38,13 @@ The goal of this project is to build confidence with:
 - `week_6/` - linked lists and recursion
   - `linked_lists.py` - linked list problems (counting elements, traversal)
   - `recursion.py` - recursion practice
+- `week_7/` - recursion, binary search, and a peer mock interview
+  - `recusion_exercise.py` - recursion exercises using the UMPIRE method
+  - `binary_search.py` - iterative binary search implementation
+  - `peer_mock_interviews.py` - peer mock interview problems (e.g., Ransom Note)
+- `week_8/` - binary trees and binary search trees
+  - `bsf_with_nodes.py` - BST insertion and breadth-first traversal using tree/linked-list nodes
+  - `more_practice_trees.py` - additional BST practice (traversals and related problems) using the UMPIRE method
 - `side_work/` - extra practice outside the weekly curriculum
   - `sorting_algorithms.py` - merge sort implementation and related practice problems
 
@@ -70,6 +79,11 @@ python3 week_4/big_oh.py
 python3 week_5/classes.py
 python3 week_6/linked_lists.py
 python3 week_6/recursion.py
+python3 week_7/recusion_exercise.py
+python3 week_7/binary_search.py
+python3 week_7/peer_mock_interviews.py
+python3 week_8/bsf_with_nodes.py
+python3 week_8/more_practice_trees.py
 python3 side_work/sorting_algorithms.py
 ```
 
@@ -79,4 +93,4 @@ This project is a learning workspace and is meant to document progress over time
 
 ## Status
 
-In progress: Week 6 exercises (linked lists, recursion).
+In progress: Week 8 exercises (binary trees, binary search trees).
